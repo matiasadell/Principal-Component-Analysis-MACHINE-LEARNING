@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  1 12:06:32 2019
-
-@author: juangabriel
-"""
-
 # ACP 
 
 # Cómo importar las librerías
@@ -33,7 +25,7 @@ X_test = sc_X.transform(X_test)
 
 # Reducir la dimensión del dataset con ACP
 from sklearn.decomposition import PCA
-pca = PCA(n_components = 2)     # El numero de componentes es 2 porque es en 2D
+pca = PCA(n_components = 2)     
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 explained_variance = pca.explained_variance_ratio_
